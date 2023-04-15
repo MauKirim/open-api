@@ -5,7 +5,7 @@
  */
 return [
     "token" => env('MAUKIRIM_TOKEN', ''),
-    "dev_url" => "https://dev-api.maukirim.com",
+    "dev_url" => "https://api-dev.maukirim.com",
     "prod_url" => "https://api.maukirim.com",
     "api_env" => env('MAUKIRIM_ENV', 'prod'),
 ];
