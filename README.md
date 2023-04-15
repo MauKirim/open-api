@@ -1,10 +1,10 @@
-# Very short description of the package
+# OpenAPI Wrapper for MauKirim
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/maukirim/open-api.svg?style=flat-square)](https://packagist.org/packages/maukirim/open-api)
 [![Total Downloads](https://img.shields.io/packagist/dt/maukirim/open-api.svg?style=flat-square)](https://packagist.org/packages/maukirim/open-api)
 
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+This package is a wrapper for [MauKirim](https://maukirim.com) OpenAPI to send message to whatsapp, you can send plain
+message, message with button, message with image, and message with document.
 
 ## Installation
 
