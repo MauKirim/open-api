@@ -1,9 +1,11 @@
 {
   "name": "maukirim/open-api",
-  "description": "Official Package Wrapper for docs.maukirim.com",
+  "description": "Official Package Whatsapp API provided by maukirim.com",
   "keywords": [
     "maukirim",
-    "open-api"
+    "open-api",
+    "whatsapp",
+    "api"
   ],
   "homepage": "https://github.com/maukirim/open-api",
   "license": "MIT",
