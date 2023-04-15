@@ -21,7 +21,7 @@ class OpenApiServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('open-api.php'),
+                __DIR__ . '/../config/config.php' => config_path('open-api.php'),
             ], 'config');
 
             // Publishing the views.
@@ -50,11 +50,11 @@ class OpenApiServiceProvider extends ServiceProvider
     public function register()
     {
         // Automatically apply the package configuration
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'open-api');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'open-api');
 
         // Register the main class to use with the facade
         $this->app->singleton('open-api', function () {
-            return new OpenApi;
+            return new OpenApi(10);
         });
     }
 }
