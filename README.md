@@ -88,6 +88,25 @@ $openApi->sendDocument(
 )
 ```
 
+send otp to whatsapp
+
+```php
+use MauKirim\OpenApi;
+$openApi->sendOTP(
+    '628xxxxxx'
+)
+```
+
+validate otp
+
+```php
+use MauKirim\OpenApi;
+$openApi->validateOTP(
+    '628xxxxxx',
+    '123456'
+)
+```
+
 ### Testing
 
 ```bash

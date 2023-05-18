@@ -191,4 +191,51 @@ class OpenApi
         }
     }
 
+    /**
+     * Send OTP to msdn
+     * @param string $msdn
+     * @return mixed
+     * @throws GuzzleException
+     */
+
+    public function sendOTP(string $msdn)
+    {
+        $response = $this->client->request('POST', 'api/v1/otp/send', [
+            'json' => [
+                'msdn' => $msdn
+            ]
+        ]);
+        try {
+            $data = $this->responseArray($response->getBody()->getContents());
+            return $data["process_id"];
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+    /**
+     * Validate OTP
+     * @param string $msdn
+     * @param string $otp
+     * @return mixed
+     * @throws GuzzleException
+     */
+
+    public function validateOTP(string $msdn, string $otp)
+    {
+        $response = $this->client->request('POST', 'api/v1/otp/validate', [
+            'json' => [
+                'msdn' => $msdn,
+                'otp' => $otp
+            ]
+        ]);
+        try {
+            $data = $this->responseArray($response->getBody()->getContents());
+            return $data["process_id"];
+        } catch (\Exception $e) {
+            return false;
+        }
+    }
+
+
 }
